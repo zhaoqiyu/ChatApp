@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	div(ng-controller='ChatController')#container
+		ul#messages(ng-repeat="message in receivedMsg")
+			li {{message}}
+		div#drawboard
+			canvas#canvas1(onmousedown="show_position(event)", width="500px", height="500px")
+			span PositionX: {{posX}}
+			span PositionY: {{posY}}
+		div#input
+			input#m(autocomplete='off', ng-model="msg")
+			button(ng-click="sendMsg()") Send
+

@@ -1,19 +1,18 @@
 {
-  "name": "chat-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "chatapp",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhaoqiyu/ChatApp.git"
-  },
-  "author": "Allen Zhao",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zhaoqiyu/ChatApp/issues"
-  },
-  "homepage": "https://github.com/zhaoqiyu/ChatApp#readme"
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0",
+    "pug": "~2.0.0-beta10",
+    "serve-favicon": "~2.3.2",
+    "socket.io": "^1.7.3"
+  }
 }
