@@ -42,6 +42,16 @@ io.on('connection', function(socket) {
         console.log('message: ' + msg);
         io.emit('chat message', msg);
     });
+
+    socket.on('start_draw', function(msg){
+      console.log(msg);
+      io.emit('start_draw', msg);
+    })
+    socket.on('draw_data', function(msg){
+        //io.emit('')
+        console.log(msg);
+        io.emit('draw_data', msg);
+    })
 });
 
 /**

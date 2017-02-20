@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	div.login-page
+		div.form(ng-show="!isRegistered")
+			input(type='text', placeholder='username', ng-model="username")
+			input(type='password', placeholder='password', ng-model="password")
+			input(type='text', placeholder='email address', ng-model="email")
+			button(ng-click="createUser()") create
+			p.message
+				| Already registered?
+				a(href="javascript:;", ng-click="isRegistered = !isRegistered") Sign In
+		div.form(ng-show="isRegistered")
+			input(type='text', placeholder='username', ng-model="username")
+			input(type='password', placeholder='password', ng-model="password")
+			button(ng-click="loginUser()") login
+			p.message
+				| Not registered?
+				a(href="javascript:;", ng-click="isRegistered = !isRegistered") Create an account

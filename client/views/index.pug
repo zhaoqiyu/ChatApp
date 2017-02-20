@@ -5,9 +5,11 @@ block content
 		ul#messages(ng-repeat="message in receivedMsg")
 			li {{message}}
 		div#drawboard
-			canvas#canvas1(onmousedown="show_position(event)", width="500px", height="500px")
+			canvas#canvas1(width="500px", height="500px", ng-show="!displayOnly")
+			canvas#canvas2(width="500px", height="500px", ng-show="displayOnly")
 			span PositionX: {{posX}}
 			span PositionY: {{posY}}
+			button(ng-click="eraser()") Eraser
 		div#input
 			input#m(autocomplete='off', ng-model="msg")
 			button(ng-click="sendMsg()") Send

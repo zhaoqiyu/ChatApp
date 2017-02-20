@@ -4,11 +4,13 @@ html
 		title Socket.IO chat
 
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 		block script
 			script(src='socket.io/socket.io.js')
 			script(src="https://code.jquery.com/jquery-3.1.1.js",integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=",crossorigin="anonymous")
 			script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js")
 			script(src='/javascripts/socket.js')
+			script(src='/javascripts/loginController.js')
 
 	body(ng-app='ChatApp')
 		block content
